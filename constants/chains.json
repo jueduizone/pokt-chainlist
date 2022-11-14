@@ -1,0 +1,391 @@
+[
+  {
+    "name": "Ethereum Mainnet",
+    "chain": "ETH",
+    "icon": "ethereum",
+    "rpc": [
+      "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
+      "https://eth-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://ethereum.org",
+    "shortName": "eth",
+    "chainId": 1,
+    "networkId": 1,
+    "slip44": 60,
+    "ens": {
+      "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    },
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Avalanche C-Chain",
+    "chain": "AVAX",
+    "rpc": [
+      "https://avax-mainnet.gateway.pokt.network/v1/lb/605238bf6b986eea7cf36d5e/ext/bc/C/rpc"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
+    "nativeCurrency": {
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "infoURL": "https://www.avax.network/",
+    "shortName": "Avalanche",
+    "chainId": 43114,
+    "networkId": 43114,
+    "slip44": 9005,
+    "explorers": [
+      {
+        "name": "cchainExplorer",
+        "url": "https://cchain.explorer.avax.network/",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Gnosis Chain (formerly xDai)",
+    "chain": "Gnosis",
+    "icon": "gnosis",
+    "rpc": [
+      "https://xdai-rpc.gateway.pokt.network"
+    ],
+    "faucets": [
+      "https://faucet.gimlu.com/gnosis",
+      "https://stakely.io/faucet/gnosis-chain-xdai",
+      "https://faucet.prussia.dev/xdai"
+    ],
+    "nativeCurrency": {
+      "name": "xDAI",
+      "symbol": "xDAI",
+      "decimals": 18
+    },
+    "infoURL": "https://www.xdaichain.com/",
+    "shortName": "gno",
+    "chainId": 100,
+    "networkId": 100,
+    "slip44": 700,
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://blockscout.com/xdai/mainnet",
+        "icon": "blockscout",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Fuse Mainnet",
+    "chain": "FUSE",
+    "rpc": [
+      "https://fuse-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Fuse",
+      "symbol": "FUSE",
+      "decimals": 18
+    },
+    "infoURL": "https://fuse.io/",
+    "shortName": "fuse",
+    "chainId": 122,
+    "networkId": 122
+  },
+  {
+    "name": "Polygon Mainnet",
+    "chain": "Polygon",
+    "rpc": [
+      "https://poly-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": 18
+    },
+    "infoURL": "https://polygon.technology/",
+    "shortName": "MATIC",
+    "chainId": 137,
+    "networkId": 137,
+    "slip44": 966,
+    "explorers": [
+      {
+        "name": "polygonscan",
+        "url": "https://polygonscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Binance Smart Chain Mainnet",
+    "chain": "BSC",
+    "rpc": [
+      "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
+    "nativeCurrency": {
+      "name": "Binance Chain Native Token",
+      "symbol": "BNB",
+      "decimals": 18
+    },
+    "infoURL": "https://www.binance.org",
+    "shortName": "bnb",
+    "chainId": 56,
+    "networkId": 56,
+    "slip44": 714,
+    "explorers": [
+      {
+        "name": "bscscan",
+        "url": "https://bscscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Harmony Mainnet Shard 0",
+    "chain": "Harmony",
+    "rpc": [
+      "https://harmony-0-rpc.gateway.pokt.network"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
+    "nativeCurrency": {
+      "name": "ONE",
+      "symbol": "ONE",
+      "decimals": 18
+    },
+    "infoURL": "https://www.harmony.one/",
+    "shortName": "hmy-s0",
+    "chainId": 1666600000,
+    "networkId": 1666600000,
+    "explorers": [
+      {
+        "name": "Harmony Block Explorer",
+        "url": "https://explorer.harmony.one",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Evmos Testnet",
+    "chain": "Evmos",
+    "rpc": [
+      "https://evmos-testnet.gateway.pokt.network/v1/lb/61aabb3495d548003aebfd1c"
+    ],
+    "faucets": [
+      "https://faucet.evmos.dev"
+    ],
+    "nativeCurrency": {
+      "name": "test-Evmos",
+      "symbol": "tEVMOS",
+      "decimals": 18
+    },
+    "infoURL": "https://evmos.org",
+    "shortName": "evmos-testnet",
+    "chainId": 9000,
+    "networkId": 9000,
+    "icon": "evmos",
+    "explorers": [
+      {
+        "name": "Evmos EVM Explorer",
+        "url": "https://evm.evmos.dev",
+        "standard": "EIP3091",
+        "icon": "evmos"
+      },
+      {
+        "name": "Evmos Cosmos Explorer",
+        "url": "https://explorer.evmos.dev",
+        "standard": "none",
+        "icon": "evmos"
+      }
+    ]
+  },
+  {
+    "name": "Boba Network",
+    "chain": "ETH",
+    "rpc": [
+      "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://boba.network",
+    "shortName": "Boba",
+    "chainId": 288,
+    "networkId": 288,
+    "explorers": [
+      {
+        "name": "Blockscout",
+        "url": "https://blockexplorer.boba.network",
+        "standard": "none"
+      }
+    ],
+    "parent": {
+      "type": "L2",
+      "chain": "eip155-1",
+      "bridges": [
+        {
+          "url": "https://gateway.boba.network"
+        }
+      ]
+    }
+  },
+  {
+    "name": "IoTeX Network Mainnet",
+    "chain": "iotex.io",
+    "rpc": [
+      "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
+      "https://pokt-api.iotex.io"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "IoTeX",
+      "symbol": "IOTX",
+      "decimals": 18
+    },
+    "infoURL": "https://iotex.io",
+    "shortName": "iotex-mainnet",
+    "chainId": 4689,
+    "networkId": 4689,
+    "explorers": [
+      {
+        "name": "iotexscan",
+        "url": "https://iotexscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "DFK Chain",
+    "chain": "DFK",
+    "icon": "dfk",
+    "network": "mainnet",
+    "rpc": [
+      "https://avax-dfk.gateway.pokt.network/v1/lb/6244818c00b9f0003ad1b619/ext/bc/q2aTwKuyzgs8pynF7UXBZCU7DejbZbZ6EUyHr3JQzYgwNPUPi/rpc"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Jewel",
+      "symbol": "JEWEL",
+      "decimals": 18
+    },
+    "infoURL": "https://defikingdoms.com",
+    "shortName": "DFK",
+    "chainId": 53935,
+    "networkId": 53935,
+    "explorers": [
+      {
+        "name": "ethernal",
+        "url": "https://explorer.dfkchain.com",
+        "icon": "ethereum",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "Fantom Opera",
+    "chain": "FTM",
+    "rpc": [
+      "https://fantom-mainnet.gateway.pokt.network/v1/lb/6261a8a154c745003bcdb0f8"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/"
+    ],
+    "nativeCurrency": {
+      "name": "Fantom",
+      "symbol": "FTM",
+      "decimals": 18
+    },
+    "infoURL": "https://fantom.foundation",
+    "shortName": "ftm",
+    "chainId": 250,
+    "networkId": 250,
+    "icon": "fantom",
+    "explorers": [
+      {
+        "name": "ftmscan",
+        "url": "https://ftmscan.com",
+        "icon": "ftmscan",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Evmos",
+    "chain": "Evmos",
+    "rpc": [
+      "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Evmos",
+      "symbol": "EVMOS",
+      "decimals": 18
+    },
+    "infoURL": "https://evmos.org",
+    "shortName": "evmos",
+    "chainId": 9001,
+    "networkId": 9001,
+    "icon": "evmos",
+    "explorers": [
+      {
+        "name": "Evmos EVM Explorer (Blockscout)",
+        "url": "https://evm.evmos.org",
+        "standard": "none",
+        "icon": "evmos"
+      },
+      {
+        "name": "Evmos Cosmos Explorer (Mintscan)",
+        "url": "https://www.mintscan.io/evmos",
+        "standard": "none",
+        "icon": "evmos"
+      }
+    ]
+  },
+  {
+    "name": "Swimmer Network",
+    "chain": "TUS",
+    "icon": "swimmer",
+    "network": "mainnet",
+    "rpc": [
+      "https://avax-cra-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "TUS",
+      "symbol": "TUS",
+      "decimals": 18
+    },
+    "infoURL": "https://swimmer.network",
+    "shortName": "Swimmer",
+    "chainId": 73772,
+    "networkId": 73772,
+    "explorers": [
+      {
+        "name": "swimmer",
+        "url": "https://explorer.swimmer.network",
+        "icon": "swimmer",
+        "standard": "none"
+      }
+    ]
+  }
+]

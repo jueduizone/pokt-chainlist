@@ -6,14 +6,16 @@ import { fetcher, populateChain } from "../utils";
 import { useSearch, useTestnets } from "../stores";
 import Layout from "../components/Layout";
 import classes from "../components/Layout/index.module.css";
+import chains_source from "../constants/chains.json"
 
 export async function getStaticProps({ locale }) {
-  const chains = await fetcher("https://chainid.network/chains.json");
-  const chainTvls = await fetcher("https://api.llama.fi/chains");
+  // const chains = await fetcher("https://chainid.network/chains.json");
+  const chains = chains_source;
+  // const chainTvls = await fetcher("https://api.llama.fi/chains");
 
   const sortedChains = chains
     .filter((c) => c.name !== "420coin") // same chainId as ronin
-    .map((chain) => populateChain(chain, chainTvls))
+    // .map((chain) => populateChain(chain, chainTvls))
     .sort((a, b) => {
       return (b.tvl ?? 0) - (a.tvl ?? 0);
     });
@@ -50,10 +52,10 @@ function Home({ changeTheme, theme, sortedChains }) {
   return (
     <>
       <Head>
-        <title>Chainlist</title>
+        <title>POKT RPC List</title>
         <meta
           name="description"
-          content="Chainlist is a list of RPCs for EVM(Ethereum Virtual Machine) networks. Use the information to connect your wallets and Web3 middleware providers to the appropriate Chain ID and Network ID. Find the best RPC for both Mainnet and Testnet to connect to the correct chain"
+          content="POKT RPClist is a list of decentralized RPC services supported by Pocket Network. You can use this tool to easily connect your wallets to several of Pocket's public RPC URLs across multiple chains. Pocket Network has tens of thousands of independent nodes to provide stable, fast, and decentralized RPC services with maximum uptime."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

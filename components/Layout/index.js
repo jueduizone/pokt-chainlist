@@ -9,18 +9,19 @@ import { useTranslations } from "next-intl";
 
 export default function Layout({ changeTheme, theme, children }) {
   const t = useTranslations("Common");
-  const addNetwork = () => {
-    window.open("https://github.com/ethereum-lists/chains", "_blank");
+  const joinDiscord = () => {
+    window.open("https://discord.com/invite/uYs6Esum3r", "_blank");
   };
 
   const addRpc = () => {
     window.open(
-      "https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.json",
+      "https://github.com/jueduizone/pokt-chainlist/blob/main/constants/chains.json",
       "_blank"
     );
   };
 
-  const url = '/logo.svg'
+  const url = '/pokt-logo.png'
+  const url_white = '/pokt-logo-white.png'
 
   return (
     <div className={styles.container}>
@@ -35,9 +36,13 @@ export default function Layout({ changeTheme, theme, children }) {
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
             <img style={{
-                width: '360px',
+                width: '200px',
                 marginLeft: '-15px',
-              }} src={url} alt="Chainlist logo" />
+              }} src={
+              theme.palette.type === "dark"
+                  ? url
+                  : url_white
+              } alt="pokt logo" />
 
               <Typography variant="h2" className={classes.helpingParagraph}>
                 {t("help-info")}
@@ -50,18 +55,6 @@ export default function Layout({ changeTheme, theme, children }) {
                 color="primary"
                 variant="contained"
                 className={classes.addNetworkButton}
-                onClick={addNetwork}
-                endIcon={<AddIcon />}
-              >
-                <Typography className={classes.buttonLabel}>
-                  {t("add-your-network")}
-                </Typography>
-              </Button>
-              <Button
-                size="large"
-                color="primary"
-                variant="outlined"
-                className={classes.addRpcButton}
                 onClick={addRpc}
                 endIcon={<AddIcon />}
               >
@@ -69,10 +62,22 @@ export default function Layout({ changeTheme, theme, children }) {
                   {t("add-your-rpc")}
                 </Typography>
               </Button>
+              <Button
+                size="large"
+                color="primary"
+                variant="outlined"
+                className={classes.addRpcButton}
+                onClick={joinDiscord}
+                endIcon={<AddIcon />}
+              >
+                <Typography className={classes.buttonLabel}>
+                  {t("join-our-discord")}
+                </Typography>
+              </Button>
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/DefiLlama/chainlist"
+                  href="https://github.com/jueduizone/pokt-chainlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
