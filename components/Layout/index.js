@@ -91,7 +91,21 @@ export default function Layout({ changeTheme, theme, children }) {
                     {t("view-source-code")}
                   </Typography>
                 </a>
+                <a
+                    className={`${classes.socialButton}`}
+                    href="https://dnlab.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  <img style={{
+                    width: '19px'
+                  }} src={'./dnlab.png'}></img>
+                  <Typography variant="body1" className={classes.sourceCode}>
+                    {t("powered-by")}
+                  </Typography>
+                </a>
               </div>
+
             </div>
           </div>
           <div

@@ -1,7 +1,8 @@
 {
   "Common": {
     "connect-wallet": "Connect Wallet",
-    "view-source-code": "View Code",
+    "view-source-code": "Forked from chainlist",
+    "powered-by": "Powered by DNLab",
     "join-our-discord": "Join Discord",
     "currency": "Currency",
     "search-networks": "Search Networks",
