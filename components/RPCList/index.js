@@ -8,7 +8,7 @@ import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { useTranslations } from "next-intl";
 
 export default function RPCList({ chain }) {
-  const chains = useRPCData(chain.rpc);
+  const chains = useRPCData(chain, chain.rpc);
 
   const data = useMemo(() => {
     const sortedData = chains?.sort((a, b) => {
@@ -126,6 +126,19 @@ export default function RPCList({ chain }) {
           guide to change RPC endpoint's of Ethereum Mainnet
         </p>
       )}
+      {!chain.isEvm && (
+          <p className={classes.helperText}>
+            Follow{" "}
+            <a
+                href={chain.rpcCall.addGuide}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              this
+            </a>{" "}
+            guide to change RPC endpoint's of {chain.name}
+          </p>
+      )}
     </Paper>
   );
 }
@@ -183,9 +196,9 @@ const Row = ({ values, chain, isEthMainnet }) => {
               !data.disableConnect && (
                 <Button
                   style={{ padding: "0 8px" }}
-                  onClick={() => addToNetwork(account, chain, data?.url)}
+                  onClick={chain.isEvm ?() => addToNetwork(account, chain, data?.url):() => navigator.clipboard.writeText(chain.rpc)}
                 >
-                  {t(renderProviderText(account))}
+                  {chain.isEvm ? t(renderProviderText(account)):t("add-manually")}
                 </Button>
               )
             )}

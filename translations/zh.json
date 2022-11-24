@@ -13,6 +13,7 @@
     "language": "English",
     "add-to-metamask": "添加到Metamask",
     "add-to-imToken": "添加到imToken",
-    "add-to-wallet": "添加到Wallet"
+    "add-to-wallet": "添加到Wallet",
+    "add-manually": "手动复制添加"
   }
 }

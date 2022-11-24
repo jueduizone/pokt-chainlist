@@ -49,8 +49,8 @@ export default function Chain({ chain, buttonOnly }) {
   }, []);
 
   const icon = useMemo(() => {
-    return chain.chainSlug
-      ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
+    return chain.icon
+      ? `https://defillama.com/chain-icons/rsz_${chain.icon}.jpg`
       : "/unknown-logo.png";
   }, [chain]);
 
@@ -110,8 +110,8 @@ export default function Chain({ chain, buttonOnly }) {
             </span>
           </Tooltip>
         </div>
-        <div className={classes.chainInfoContainer}>
-          <div className={classes.dataPoint}>
+        <div className={chain.isEvm? classes.chainInfoContainer:classes.nonEvmChainInfoContainer}>
+          <div className={chain.isEvm? classes.dataPoint:classes.noEvmDisplay}>
             <Typography
               variant="subtitle1"
               color="textSecondary"
@@ -138,9 +138,9 @@ export default function Chain({ chain, buttonOnly }) {
           <Button
             variant="outlined"
             color="primary"
-            onClick={() => addToNetwork(account, chain)}
+            onClick={chain.isEvm ?() => addToNetwork(account, chain):() => navigator.clipboard.writeText(chain.rpc)}
           >
-            {t(renderProviderText(account))}
+            {chain.isEvm ? t(renderProviderText(account)):t("add-manually")}
           </Button>
         </div>
         {router.pathname === "/" && (

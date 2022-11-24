@@ -2,6 +2,7 @@
   {
     "name": "Ethereum Mainnet",
     "chain": "ETH",
+    "isEvm": true,
     "icon": "ethereum",
     "rpc": [
       "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
@@ -32,6 +33,7 @@
   {
     "name": "Avalanche C-Chain",
     "chain": "AVAX",
+    "isEvm": true,
     "rpc": [
       "https://avax-mainnet.gateway.pokt.network/v1/lb/605238bf6b986eea7cf36d5e/ext/bc/C/rpc"
     ],
@@ -59,6 +61,7 @@
   {
     "name": "Gnosis Chain (formerly xDai)",
     "chain": "Gnosis",
+    "isEvm": true,
     "icon": "gnosis",
     "rpc": [
       "https://xdai-rpc.gateway.pokt.network"
@@ -90,6 +93,7 @@
   {
     "name": "Fuse Mainnet",
     "chain": "FUSE",
+    "isEvm": true,
     "rpc": [
       "https://fuse-rpc.gateway.pokt.network/"
     ],
@@ -107,6 +111,7 @@
   {
     "name": "Polygon Mainnet",
     "chain": "Polygon",
+    "isEvm": true,
     "rpc": [
       "https://poly-rpc.gateway.pokt.network/"
     ],
@@ -132,6 +137,7 @@
   {
     "name": "Binance Smart Chain Mainnet",
     "chain": "BSC",
+    "isEvm": true,
     "rpc": [
       "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d"
     ],
@@ -159,6 +165,7 @@
   {
     "name": "Harmony Mainnet Shard 0",
     "chain": "Harmony",
+    "isEvm": true,
     "rpc": [
       "https://harmony-0-rpc.gateway.pokt.network"
     ],
@@ -185,6 +192,7 @@
   {
     "name": "Evmos Testnet",
     "chain": "Evmos",
+    "isEvm": true,
     "rpc": [
       "https://evmos-testnet.gateway.pokt.network/v1/lb/61aabb3495d548003aebfd1c"
     ],
@@ -219,6 +227,7 @@
   {
     "name": "Boba Network",
     "chain": "ETH",
+    "isEvm": true,
     "rpc": [
       "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f"
     ],
@@ -252,6 +261,7 @@
   {
     "name": "IoTeX Network Mainnet",
     "chain": "iotex.io",
+    "isEvm": true,
     "rpc": [
       "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
       "https://pokt-api.iotex.io"
@@ -277,6 +287,7 @@
   {
     "name": "DFK Chain",
     "chain": "DFK",
+    "isEvm": true,
     "icon": "dfk",
     "network": "mainnet",
     "rpc": [
@@ -304,6 +315,7 @@
   {
     "name": "Fantom Opera",
     "chain": "FTM",
+    "isEvm": true,
     "rpc": [
       "https://fantom-mainnet.gateway.pokt.network/v1/lb/6261a8a154c745003bcdb0f8"
     ],
@@ -332,6 +344,7 @@
   {
     "name": "Evmos",
     "chain": "Evmos",
+    "isEvm": true,
     "rpc": [
       "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
     ],
@@ -364,6 +377,7 @@
   {
     "name": "Swimmer Network",
     "chain": "TUS",
+    "isEvm": true,
     "icon": "swimmer",
     "network": "mainnet",
     "rpc": [
@@ -384,6 +398,39 @@
         "name": "swimmer",
         "url": "https://explorer.swimmer.network",
         "icon": "swimmer",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "NEAR Protocol",
+    "chain": "NEAR",
+    "isEvm": false,
+    "rpcCall": {
+      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
+      "resultPath": "result.header.height",
+      "addGuide": "https://senderwallet.io/"
+    },
+    "icon": "near",
+    "network": "mainnet",
+    "rpc": [
+      "https://near-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "NEAR",
+      "symbol": "NEAR",
+      "decimals": 18
+    },
+    "infoURL": "https://near.org",
+    "shortName": "NEAR",
+    "chainId": "",
+    "networkId": "",
+    "explorers": [
+      {
+        "name": "NEAR",
+        "url": "https://www.nearscan.org",
+        "icon": "near",
         "standard": "none"
       }
     ]

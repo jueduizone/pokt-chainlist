@@ -17,6 +17,17 @@
   margin-bottom: 20px;
 }
 
+.nonEvmChainInfoContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.noEvmDisplay {
+  display: none !important;
+}
+
 .dataPoint {
   flex: 1;
 }

@@ -9,7 +9,7 @@ export const rpcBody = JSON.stringify({
   id: 1,
 });
 
-const fetchChain = async (baseURL) => {
+const fetchChain = async (chain, baseURL) => {
   if (baseURL.includes('API_KEY')) return null;
   try {
     let API = axios.create({
@@ -37,17 +37,28 @@ const fetchChain = async (baseURL) => {
         return Promise.reject(error);
       }
     );
-
-    let { data, latency } = await API.post('', rpcBody);
-
-    return { ...data, latency };
+    console.log("Test:" + baseURL)
+    if(chain.isEvm){
+      let { data, latency } = await API.post('', rpcBody);
+      return { ...data, latency };
+    } else {
+      console.log(chain.rpcCall.rpcBody)
+      let { data, latency } = await API.post('', chain.rpcCall.rpcBody);
+      return { ...data, latency };
+    }
   } catch (error) {
     return null;
   }
 };
 
-const formatData = (url, data) => {
-  let height = data?.result?.number ?? null;
+const formatData = (chain, url, data) => {
+  let height = null;
+  if(chain.isEvm){
+    height = data?.result?.number ?? null;
+  }else{
+    let resultPath = chain.rpcCall.resultPath;
+    height=eval('data.'+resultPath);
+  }
   let latency = data?.latency ?? null;
   if (height) {
     const hexString = height.toString(16);
@@ -58,12 +69,12 @@ const formatData = (url, data) => {
   return { url, height, latency };
 };
 
-const useHttpQuery = (url) => {
+const useHttpQuery = (chain, url) => {
   return {
     queryKey: [url],
-    queryFn: () => fetchChain(url),
+    queryFn: () => fetchChain(chain, url),
     refetchInterval: 5000,
-    select: useCallback((data) => formatData(url, data), []),
+    select: useCallback((data) => formatData(chain, url, data), []),
   };
 };
 
@@ -110,17 +121,17 @@ const fetchWssChain = async (baseURL) => {
   }
 };
 
-const useSocketQuery = (url) => {
+const useSocketQuery = (chain, url) => {
   return {
     queryKey: [url],
     queryFn: () => fetchWssChain(url),
-    select: useCallback((data) => formatData(url, data), []),
+    select: useCallback((data) => formatData(chain, url, data), []),
     refetchInterval: 5000,
   };
 };
 
-const useRPCData = (urls) => {
-  const queries = urls.map((url) => (url.includes('wss://') ? useSocketQuery(url) : useHttpQuery(url)));
+const useRPCData = (chain, urls) => {
+  const queries = urls.map((url) => (url.includes('wss://') ? useSocketQuery(chain, url) : useHttpQuery(chain, url)));
   return useQueries(queries);
 };
 
