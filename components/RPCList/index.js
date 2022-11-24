@@ -130,7 +130,7 @@ export default function RPCList({ chain }) {
           <p className={classes.helperText}>
             Follow{" "}
             <a
-                href={chain.rpcCall.addGuide}
+                href={chain?.rpcCall?.addGuide}
                 target="_blank"
                 rel="noopener noreferrer"
             >

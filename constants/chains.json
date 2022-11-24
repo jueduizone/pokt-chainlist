@@ -33,6 +33,7 @@
   {
     "name": "Avalanche C-Chain",
     "chain": "AVAX",
+    "icon": "avalanche",
     "isEvm": true,
     "rpc": [
       "https://avax-mainnet.gateway.pokt.network/v1/lb/605238bf6b986eea7cf36d5e/ext/bc/C/rpc"
@@ -93,6 +94,7 @@
   {
     "name": "Fuse Mainnet",
     "chain": "FUSE",
+    "icon": "fuse",
     "isEvm": true,
     "rpc": [
       "https://fuse-rpc.gateway.pokt.network/"
@@ -111,6 +113,7 @@
   {
     "name": "Polygon Mainnet",
     "chain": "Polygon",
+    "icon": "polygon",
     "isEvm": true,
     "rpc": [
       "https://poly-rpc.gateway.pokt.network/"
@@ -137,6 +140,7 @@
   {
     "name": "Binance Smart Chain Mainnet",
     "chain": "BSC",
+    "icon": "binance",
     "isEvm": true,
     "rpc": [
       "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d"
@@ -165,6 +169,7 @@
   {
     "name": "Harmony Mainnet Shard 0",
     "chain": "Harmony",
+    "icon": "harmony",
     "isEvm": true,
     "rpc": [
       "https://harmony-0-rpc.gateway.pokt.network"
@@ -227,6 +232,7 @@
   {
     "name": "Boba Network",
     "chain": "ETH",
+    "icon": "boba",
     "isEvm": true,
     "rpc": [
       "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f"
@@ -261,6 +267,7 @@
   {
     "name": "IoTeX Network Mainnet",
     "chain": "iotex.io",
+    "icon": "iotex",
     "isEvm": true,
     "rpc": [
       "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
