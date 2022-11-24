@@ -385,7 +385,6 @@
     "name": "Swimmer Network",
     "chain": "TUS",
     "isEvm": true,
-    "icon": "swimmer",
     "network": "mainnet",
     "rpc": [
       "https://avax-cra-rpc.gateway.pokt.network"
