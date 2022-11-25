@@ -409,6 +409,137 @@
     ]
   },
   {
+    "name": "Klaytn Mainnet Cypress",
+    "chain": "KLAY",
+    "isEvm": true,
+    "icon": "klaytn",
+    "rpc": [
+      "https://klaytn-rpc.gateway.pokt.network"
+      ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "KLAY",
+      "symbol": "KLAY",
+      "decimals": 18
+    },
+    "infoURL": "https://www.klaytn.com/",
+    "shortName": "Cypress",
+    "chainId": 8217,
+    "networkId": 8217,
+    "slip44": 8217,
+    "explorers": [{
+      "name": "Klaytnscope",
+      "url": "https://scope.klaytn.com",
+      "standard": "none"
+    }]
+  },
+  {
+    "name": "Moonbeam",
+    "chain": "MOON",
+    "isEvm": true,
+    "icon": "moonbeam",
+    "rpc": [
+      "https://moonbeam-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Glimmer",
+      "symbol": "GLMR",
+      "decimals": 18
+    },
+    "infoURL": "https://moonbeam.network/networks/moonbeam/",
+    "shortName": "mbeam",
+    "chainId": 1284,
+    "networkId": 1284,
+    "explorers": [
+      {
+        "name": "moonscan",
+        "url": "https://moonbeam.moonscan.io",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "Moonriver",
+    "chain": "MOON",
+    "isEvm": true,
+    "icon": "moonriver",
+    "rpc": [
+      "https://moonriver-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Moonriver",
+      "symbol": "MOVR",
+      "decimals": 18
+    },
+    "infoURL": "https://moonbeam.network/networks/moonriver/",
+    "shortName": "mriver",
+    "chainId": 1285,
+    "networkId": 1285,
+    "explorers": [
+      {
+        "name": "moonscan",
+        "url": "https://moonriver.moonscan.io",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "OKXChain Mainnet",
+    "chain": "okxchain",
+    "isEvm": true,
+    "icon": "okexchain",
+    "rpc": [
+      "https://okc-rpc.gateway.pokt.network"
+    ],
+    "faucets": [
+      "https://free-online-app.com/faucet-for-eth-evm-chains/?"
+    ],
+    "nativeCurrency": {
+      "name": "OKXChain Global Utility Token",
+      "symbol": "OKT",
+      "decimals": 18
+    },
+    "infoURL": "https://www.okex.com/okc",
+    "shortName": "okt",
+    "chainId": 66,
+    "networkId": 66,
+    "explorers": [
+      {
+        "name": "OKLink",
+        "url": "https://www.oklink.com/en/okc",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Optimism",
+    "chain": "ETH",
+    "isEvm": true,
+    "icon": "optimism",
+    "rpc": [
+      "https://optimism-rpc.gateway.pokt.network"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://optimism.io",
+    "shortName": "oeth",
+    "chainId": 10,
+    "networkId": 10,
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://optimistic.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "NEAR Protocol",
     "chain": "NEAR",
     "isEvm": false,
@@ -430,13 +561,112 @@
     },
     "infoURL": "https://near.org",
     "shortName": "NEAR",
-    "chainId": "",
+    "chainId": "n1",
     "networkId": "",
     "explorers": [
       {
         "name": "NEAR",
         "url": "https://www.nearscan.org",
         "icon": "near",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "Osmosis",
+    "chain": "Osmosis",
+    "isEvm": false,
+    "rpcCall": {
+      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
+      "resultPath": "result.header.height",
+      "addGuide": "https://senderwallet.io/"
+    },
+    "icon": "osmosis",
+    "network": "mainnet",
+    "rpc": [
+      "https://osmosis-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "OSMO",
+      "symbol": "OSMO",
+      "decimals": 18
+    },
+    "infoURL": "https://osmosis.zone",
+    "shortName": "OSMO",
+    "chainId": "n2",
+    "networkId": "",
+    "explorers": [
+      {
+        "name": "OSMO",
+        "url": "https://www.mintscan.io/osmosis",
+        "icon": "osmosis",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "Solana",
+    "chain": "Solana",
+    "isEvm": false,
+    "rpcCall": {
+      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
+      "resultPath": "result.header.height",
+      "addGuide": "https://phantom.app/"
+    },
+    "icon": "solana",
+    "network": "mainnet",
+    "rpc": [
+      "https://solana-mainnet-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "SOL",
+      "symbol": "SOL",
+      "decimals": 18
+    },
+    "infoURL": "https://solana.com/zh",
+    "shortName": "SOL",
+    "chainId": "n3",
+    "networkId": "",
+    "explorers": [
+      {
+        "name": "SOL",
+        "url": "https://solscan.io",
+        "icon": "solana",
+        "standard": "none"
+      }
+    ]
+  },
+  {
+    "name": "Algorand",
+    "chain": "Algorand",
+    "isEvm": false,
+    "rpcCall": {
+      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
+      "resultPath": "last-round",
+      "addGuide": "https://wallet.myalgo.com"
+    },
+    "icon": "algorand",
+    "network": "mainnet",
+    "rpc": [
+      "https://osmosis-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "ALGO",
+      "symbol": "ALGO",
+      "decimals": 18
+    },
+    "infoURL": "https://algoexplorer.io",
+    "shortName": "ALGO",
+    "chainId": "n4",
+    "networkId": "",
+    "explorers": [
+      {
+        "name": "ALGO",
+        "url": "https://algoexplorer.io",
+        "icon": "algorand",
         "standard": "none"
       }
     ]
