@@ -31,12 +31,136 @@
     ]
   },
   {
+    "name": "Goerli-Ethereum Testnet ",
+    "chain": "ETH",
+    "isEvm": true,
+    "icon": "ethereum",
+    "rpc": [
+      "https://eth-goerli-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [],
+    "nativeCurrency": {
+      "name": "Goerli Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://ethereum.org",
+    "shortName": "eth",
+    "chainId": 5,
+    "networkId": 5,
+    "slip44": 60,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-goerli",
+        "url": "https://goerli.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Kovan-Ethereum Testnet",
+    "chain": "ETH",
+    "isEvm": true,
+    "icon": "ethereum",
+    "rpc": [
+      "https://eth-kovan-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=42&address=${ADDRESS}",
+      "https://faucet.kovan.network",
+      "https://gitter.im/kovan-testnet/faucet"
+    ],
+    "nativeCurrency": {
+      "name": "Kovan Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://kovan.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://kovan-testnet.github.io/website",
+    "shortName": "kov",
+    "chainId": 42,
+    "networkId": 42
+  },
+  {
+    "name": "Rinkeby-Ethereum Testnet",
+    "chain": "ETH",
+    "isEvm": true,
+    "icon": "ethereum",
+    "rpc": [
+      "https://eth-rinkeby-rpc.gateway.pokt.network"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=4&address=${ADDRESS}",
+      "https://faucet.rinkeby.io"
+    ],
+    "nativeCurrency": {
+      "name": "Rinkeby Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://www.rinkeby.io",
+    "shortName": "rin",
+    "chainId": 4,
+    "networkId": 4,
+    "ens": {
+      "registry": "0xe7410170f87102df0055eb195163a03b7f2bff4a"
+    },
+    "explorers": [
+      {
+        "name": "etherscan-rinkeby",
+        "url": "https://rinkeby.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
+    "name": "Ropsten-Ethereum Testnet",
+    "chain": "ETH",
+    "isEvm": true,
+    "icon": "ethereum",
+    "rpc": [
+      "https://eth-ropsten-rpc.gateway.pokt.network/"
+    ],
+    "faucets": [
+      "http://fauceth.komputing.org?chain=3&address=${ADDRESS}",
+      "https://faucet.ropsten.be?${ADDRESS}"
+    ],
+    "nativeCurrency": {
+      "name": "Ropsten Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "infoURL": "https://github.com/ethereum/ropsten",
+    "shortName": "rop",
+    "chainId": 3,
+    "networkId": 3,
+    "ens": {
+      "registry": "0x112234455c3a32fd11230c42e7bccd4a84e02010"
+    },
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://ropsten.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "Avalanche C-Chain",
     "chain": "AVAX",
     "icon": "avalanche",
     "isEvm": true,
     "rpc": [
-      "https://avax-mainnet.gateway.pokt.network/v1/lb/605238bf6b986eea7cf36d5e/ext/bc/C/rpc"
+      "https://avax-rpc.gateway.pokt.network"
     ],
     "faucets": [
       "https://free-online-app.com/faucet-for-eth-evm-chains/"
@@ -65,7 +189,7 @@
     "isEvm": true,
     "icon": "gnosis",
     "rpc": [
-      "https://xdai-rpc.gateway.pokt.network"
+      "https://gnosischain-rpc.gateway.pokt.network/"
     ],
     "faucets": [
       "https://faucet.gimlu.com/gnosis",
@@ -138,12 +262,42 @@
     ]
   },
   {
+    "name": "Mumbai",
+    "title": "Polygon Testnet Mumbai",
+    "chain": "Polygon",
+    "icon": "polygon",
+    "isEvm": true,
+    "rpc": [
+      "https://polygon-mumbai-rpc.gateway.pokt.network"
+    ],
+    "faucets": [
+      "https://faucet.polygon.technology/"
+    ],
+    "nativeCurrency": {
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": 18
+    },
+    "infoURL": "https://polygon.technology/",
+    "shortName": "maticmum",
+    "chainId": 80001,
+    "networkId": 80001,
+    "explorers": [
+      {
+        "name": "polygonscan",
+        "url": "https://mumbai.polygonscan.com",
+        "standard": "EIP3091"
+      }
+    ]
+  },
+  {
     "name": "Binance Smart Chain Mainnet",
     "chain": "BSC",
     "icon": "binance",
     "isEvm": true,
     "rpc": [
-      "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d"
+      "https://bsc-mainnet.gateway.pokt.network/v1/lb/6136201a7bad1500343e248d",
+      "https://bsc-rpc.gateway.pokt.network"
     ],
     "faucets": [
       "https://free-online-app.com/faucet-for-eth-evm-chains/"
@@ -235,7 +389,7 @@
     "icon": "boba",
     "isEvm": true,
     "rpc": [
-      "https://boba-mainnet.gateway.pokt.network/v1/lb/623ad21b20354900396fed7f"
+      "https://boba-rpc.gateway.pokt.network"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -270,7 +424,7 @@
     "icon": "iotex",
     "isEvm": true,
     "rpc": [
-      "https://iotex-mainnet.gateway.pokt.network/v1/lb/6176f902e19001003499f492",
+      "https://iotex-rpc.gateway.pokt.network",
       "https://pokt-api.iotex.io"
     ],
     "faucets": [],
@@ -298,7 +452,7 @@
     "icon": "dfk",
     "network": "mainnet",
     "rpc": [
-      "https://avax-dfk.gateway.pokt.network/v1/lb/6244818c00b9f0003ad1b619/ext/bc/q2aTwKuyzgs8pynF7UXBZCU7DejbZbZ6EUyHr3JQzYgwNPUPi/rpc"
+      "https://avax-dfk-rpc.gateway.pokt.network"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -314,7 +468,7 @@
       {
         "name": "ethernal",
         "url": "https://explorer.dfkchain.com",
-        "icon": "ethereum",
+        "icon": "dfk",
         "standard": "none"
       }
     ]
@@ -324,7 +478,7 @@
     "chain": "FTM",
     "isEvm": true,
     "rpc": [
-      "https://fantom-mainnet.gateway.pokt.network/v1/lb/6261a8a154c745003bcdb0f8"
+      "https://fantom-rpc.gateway.pokt.network"
     ],
     "faucets": [
       "https://free-online-app.com/faucet-for-eth-evm-chains/"
@@ -353,7 +507,7 @@
     "chain": "Evmos",
     "isEvm": true,
     "rpc": [
-      "https://evmos-mainnet.gateway.pokt.network/v1/lb/627586ddea1b320039c95205"
+      "https://evmos-rpc.gateway.pokt.network"
     ],
     "faucets": [],
     "nativeCurrency": {

@@ -9,8 +9,8 @@ import classes from "../components/Layout/index.module.css";
 import chains_source from "../constants/chains.json"
 
 export async function getStaticProps({ locale }) {
-  // const chains = await fetcher("https://raw.githubusercontent.com/jueduizone/pokt-chainlist/main/constants/chains.json");
-  const chains = chains_source;
+  const chains = await fetcher("https://raw.githubusercontent.com/jueduizone/pokt-chainlist/main/constants/chains.json");
+  // const chains = chains_source;
   // const chainTvls = await fetcher("https://api.llama.fi/chains");
 
   const sortedChains = chains
