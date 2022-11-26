@@ -791,38 +791,5 @@
         "standard": "none"
       }
     ]
-  },
-  {
-    "name": "Algorand",
-    "chain": "Algorand",
-    "isEvm": false,
-    "rpcCall": {
-      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
-      "resultPath": "last-round",
-      "addGuide": "https://wallet.myalgo.com"
-    },
-    "icon": "algorand",
-    "network": "mainnet",
-    "rpc": [
-      "https://osmosis-rpc.gateway.pokt.network/"
-    ],
-    "faucets": [],
-    "nativeCurrency": {
-      "name": "ALGO",
-      "symbol": "ALGO",
-      "decimals": 18
-    },
-    "infoURL": "https://algoexplorer.io",
-    "shortName": "ALGO",
-    "chainId": "n4",
-    "networkId": "",
-    "explorers": [
-      {
-        "name": "ALGO",
-        "url": "https://algoexplorer.io",
-        "icon": "algorand",
-        "standard": "none"
-      }
-    ]
   }
 ]
