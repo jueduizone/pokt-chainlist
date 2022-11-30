@@ -731,14 +731,14 @@
     "chain": "Osmosis",
     "isEvm": false,
     "rpcCall": {
-      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
-      "resultPath": "result.header.height",
-      "addGuide": "https://senderwallet.io/"
+      "rpcBody": "{\"jsonrpc\":\"2.0\",\"id\":1, \"method\":\"status\"}",
+      "resultPath": "result.sync_info.latest_block_height",
+      "addGuide": "https://help.keplr.app"
     },
     "icon": "osmosis",
     "network": "mainnet",
     "rpc": [
-      "https://osmosis-rpc.gateway.pokt.network/"
+      "https://osmosis-rpc.gateway.pokt.network"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -764,14 +764,14 @@
     "chain": "Solana",
     "isEvm": false,
     "rpcCall": {
-      "rpcBody": "{\"jsonrpc\": \"2.0\",\"id\": \"dontcare\",\"method\": \"block\",\"params\": {\"finality\": \"final\"}}",
-      "resultPath": "result.header.height",
+      "rpcBody": "{\"jsonrpc\":\"2.0\",\"id\":1, \"method\":\"getBlockHeight\"}",
+      "resultPath": "result",
       "addGuide": "https://phantom.app/"
     },
     "icon": "solana",
     "network": "mainnet",
     "rpc": [
-      "https://solana-mainnet-rpc.gateway.pokt.network/"
+      "https://solana-mainnet-rpc.gateway.pokt.network"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -779,7 +779,7 @@
       "symbol": "SOL",
       "decimals": 18
     },
-    "infoURL": "https://solana.com/zh",
+    "infoURL": "https://solana.com",
     "shortName": "SOL",
     "chainId": "n3",
     "networkId": "",
