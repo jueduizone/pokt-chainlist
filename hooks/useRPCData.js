@@ -37,18 +37,11 @@ const fetchChain = async (chain, baseURL) => {
         return Promise.reject(error);
       }
     );
-    // console.log("Test:" + baseURL)
     if(chain.isEvm){
       let { data, latency } = await API.post('', rpcBody);
       return { ...data, latency };
     } else {
-      console.log(chain.rpcCall.rpcBody)
-      let rpcPath = chain.rpcCall.rpcPath;
-      let rpcUrl = chain.rpc;
-      if(rpcPath !== ''){
-        rpcUrl = rpcUrl + rpcPath
-      }
-      let { data, latency } = await API.post(rpcUrl, chain.rpcCall.rpcBody);
+      let { data, latency } = await API.post('', chain.rpcCall.rpcBody);
       return { ...data, latency };
     }
   } catch (error) {
