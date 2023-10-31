@@ -50,7 +50,7 @@ export default function Chain({ chain, buttonOnly }) {
 
   const icon = useMemo(() => {
     return chain.icon
-      ? `https://defillama.com/chain-icons/rsz_${chain.icon}.jpg`
+      ? `https://icons.llamao.fi/icons/chains/rsz_${chain.icon}.jpg`
       : "/unknown-logo.png";
   }, [chain]);
 
@@ -92,7 +92,7 @@ export default function Chain({ chain, buttonOnly }) {
       >
         <div className={classes.chainNameContainer}>
           <div className={classes.avatar}>
-            <Image
+            <img
               src={icon}
               onError={(e) => {
                 e.target.onerror = null;

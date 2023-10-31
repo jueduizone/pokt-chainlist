@@ -59,7 +59,7 @@ export async function getStaticPaths() {
 function Chain({ changeTheme, theme, chain }) {
   const icon = useMemo(() => {
     return chain?.chainSlug
-      ? `https://defillama.com/chain-icons/rsz_${chain.chainSlug}.jpg`
+      ? `https://icons.llamao.fi/icons/chains/rsz_${chain.chainSlug}.jpg`
       : "/unknown-logo.png";
   }, [chain]);
 
